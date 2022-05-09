@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!--
+                         <property name="dialect">org.hibernate.dialect.SQLiteDialect</property>
+                <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+                        <property name="connection.driver_class">org.sqlite.JDBC</property>
+                <property name="connection.url">jdbc:sqlite:D:/school-projects/year2sem2/mpp/datab/motorcycle.db</property>
+
+                 Echo all executed SQL to stdout
+                <property name="show_sql">true</property>
+                <property name="format_sql">true</property>
+                <mapping resource="configs/Organizer.hbm.xml"/>
+
+            </session-factory>
+        </hibernate-configuration>
+        -->
+
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">Ioana0701</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/Bugs</property>
+
+
+
+        <property name="connection_pool_size">1</property>
+
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <property name="show_sql">true</property>
+
+
+        <mapping resource="configs/Bug.hbm.xml"/>
+        <mapping resource="configs/User.hbm.xml"/>
+        <!--<mapping class="org.javabrains.sanjaya.dto.UserDetails"/>-->
+
+    </session-factory>
+</hibernate-configuration>

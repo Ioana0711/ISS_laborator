@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="bugs.Bug"
+           table="bug">
+        <id name="id" column="id_bug" type="java.lang.Integer">
+            <generator class="increment"/>
+        </id>
+        <property
+                name="denumire"
+                column="denumire"
+                type="java.lang.String"/>
+
+        <property
+                name="descriere"
+                column="descriere"
+                type="java.lang.String"/>
+
+    </class>
+</hibernate-mapping>

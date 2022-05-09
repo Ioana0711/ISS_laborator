@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+}
+
+group 'fd.fgd'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':Model')
+    implementation project(':Persistence')
+    implementation 'org.hibernate:hibernate-core:5.2.10.Final'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    // https://mvnrepository.com/artifact/org.postgresql/postgresql
+    runtimeOnly 'org.postgresql:postgresql:42.3.4'
+}
+
+test {
+    useJUnitPlatform()
+}
