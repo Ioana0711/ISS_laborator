@@ -82,4 +82,8 @@ public class LoginBugController{
                     break;
                 }
         }
+
+        public void openSignUpWindow(User user) throws IOException{
+
+        }
 }

@@ -28,5 +28,20 @@ public class Service {
         return bugRepo.getAll();
     }
 
+    public void addBug(Bug bug) throws ValidationException{
+        bugRepo.addBug(bug);
+    }
+
+    public void updateBug(Bug bug) throws ValidationException{
+        bugRepo.updateBug(bug);
+    }
+
+    public void deleteBug(Integer id) throws ValidationException{
+        bugRepo.deleteBug(id);
+    }
+
+    public boolean findUser(String username) throws ValidationException{
+        return userRepo.findUser(username) != null;
+    }
 
 }

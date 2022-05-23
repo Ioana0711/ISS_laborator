@@ -28,7 +28,7 @@ public class StartApp extends Application {
         Service service = new Service(userRepo, bugRepo);
 
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("/loginBug.fxml"));
+        loader.setLocation(getClass().getResource("/LoginBugView.fxml"));
         Parent loginWindow = loader.load();
         LoginBugController loginBugController = loader.getController();
         loginBugController.setService(service);
